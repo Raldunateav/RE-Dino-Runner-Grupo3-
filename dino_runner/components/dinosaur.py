@@ -77,7 +77,7 @@ class Dinosaur(Sprite):
         if self.step_index > 5:
             self.image = DUCKING[1]
         else:
-            self.image = RUNNING[0]
+            self.image = DUCKING[0]
         self.step_index +=1
 
 
