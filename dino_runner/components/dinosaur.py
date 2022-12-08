@@ -6,7 +6,7 @@ from dino_runner.utils.constants import JUMPING, RUNNING, DUCKING
 
 X_POS = 80
 Y_POS = 310
-Y_POS_DUCK = 100
+Y_POS_DUCK = 345
 JUMP_VELOCITY = 8
 class Dinosaur(Sprite):
 
@@ -35,10 +35,13 @@ class Dinosaur(Sprite):
             
         if user_input[pygame.K_UP] and not self.dino_jump:
             self.dino_jump = True
-            self.dino_run = False      
+            self.dino_run = False 
+            self.dino_duck = False     
         elif not self.dino_jump:
             self.dino_jump = False
+            self.dino_run =False
             self.dino_run = True
+            
         
         if user_input[pygame.K_DOWN] and not self.dino_jump:
             self.dino_duck = True
@@ -46,8 +49,9 @@ class Dinosaur(Sprite):
             self.dino_run = False
         elif not self.dino_duck:
             self.dino_duck = False
+            self.dino_jump = False
             self.dino_run = True
-
+        
         if self.step_index >= 10:
             self.step_index = 0
     
