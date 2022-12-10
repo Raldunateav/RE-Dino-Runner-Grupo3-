@@ -58,7 +58,7 @@ class Dinosaur(Sprite):
             self.dino_jump = False
             self.dino_rect.y = self.Y_POS
             self.jump_velocity = self.JUMP_VELOCITY
-        print(self.jump_velocity)
+        
 
     def run (self):
         self.dino_rect = self.image.get_rect()

@@ -1,11 +1,8 @@
-from dino_runner.components.obstacles.obstacle import Obstacle
+import random
+from dino_runner.components.obstacles.obstacle_bird import ObstacleBird
 
-class Bird(Obstacle):
-    def __init__(self):
-        pass
-
-    def update(self):
-        pass
-        
-    def draw(self, screen):
-        pass
+class Bird(ObstacleBird):
+    def __init__(self, images):
+        self.type = random.randint(0,1)
+        super().__init__(images, self.type)
+        self.rect.y = 270

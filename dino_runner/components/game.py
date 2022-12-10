@@ -14,7 +14,7 @@ class Game:
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         self.clock = pygame.time.Clock()
         self.playing = False
-        self.game_speed = 20
+        self.game_speed = 25
         self.x_pos_bg = 0
         self.y_pos_bg = 380
         self.player = Dinosaur()
