@@ -20,4 +20,4 @@ class Score:
         screen.blit(text_component,text_rect)
 
     def reset(self):
-        self.score += 1
+        self.score = 0

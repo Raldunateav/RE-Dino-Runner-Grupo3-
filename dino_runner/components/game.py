@@ -37,9 +37,9 @@ class Game:
         # Game loop: events - update - draw
         self.playing = True
         self.obstacle_manager.reset_obstacles()
-        self.score.reset()
-        self.death_count += 1
+        self.death_count += 1 
         self.deaths.update()
+        self.score.reset()
         while self.playing:
             self.events()
             self.update()
