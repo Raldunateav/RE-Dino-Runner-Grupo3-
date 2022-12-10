@@ -38,3 +38,7 @@ class ObstacleManager:
             obstacle.draw(screen)
         for obstacle in self.bird_obstacles:
             obstacle.draw(screen)
+    
+    def reset_obstacles(self):
+        self.obstacles = []
+        self.bird_obstacles = []
